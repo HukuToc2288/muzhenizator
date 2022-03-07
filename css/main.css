@@ -1,0 +1,106 @@
+
+html {
+    /* Цвет фона под текстом параграфа */
+    background: #0D0D0D;
+    color: white; /* Цвет текста */
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+#title-container {
+    text-align: center;
+    color: #3bf;
+    font-family: serif;
+    letter-spacing: 0.1em;
+    font-size: 250%;
+    font-weight: normal;
+    line-height: 200%;
+    margin: 0;
+    display: block;
+}
+
+#title-span {
+    cursor: pointer;
+}
+
+#man-word-span {
+    text-align: center;
+    color: #fff;
+    font-family: serif;
+    letter-spacing: 0.1em;
+    font-size: 300%;
+    font-weight: normal;
+    line-height: 200%;
+    margin-top: 1rem;
+    display: block;
+}
+
+#message-span {
+    line-height: 150%;
+    font-weight: 200;
+    font-family: serif;
+    width: 100%;
+    margin: 1rem auto;
+    max-width: 80vh;
+    font-size: 120%;
+    text-align: center;
+}
+
+#input-container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+#word-input {
+    display: flex;
+    width: 100%;
+    max-width: 80vh;
+    font-size: 120%;
+    background: #222;
+    padding: 0.5em;
+    border: 0;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    color: white;
+}
+
+input::-webkit-input-placeholder {
+    color: #888;
+}
+
+#man-button {
+    min-width: 10em;
+    cursor: pointer;
+    font-family: helvetica, serif;
+    font-size: 120%;
+    padding: 0.5em;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    background: #3bf;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+}
+
+#man-button:active {
+    background: #4cf;
+
+}
+
+.background{
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}

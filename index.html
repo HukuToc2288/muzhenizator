@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Муженизатор</title>
+    <link href="css/main.css?refresh=1" rel="stylesheet">
+    <script src="js/jquery-3.6.0.min.js" type="text/javascript"></script>
+    <script src="js/femEndings.js" type="text/javascript"></script>
+    <script src="js/manliness.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="background" id="background1"></div>
+<div class="background" id="background2"></div>
+<h1 id="title-container">
+    <span onclick="swapTitle()" id="title-span">Муженизатор</span>
+</h1>
+<form id="form" onsubmit="requestFromDictionary();return false">
+    <div id="input-container">
+        <input id="word-input" class="center-block" type="text" placeholder="Слово" autofocus="">
+        <span id="man-button" onclick="requestFromDictionary()">Добавить мужества</span>
+    </div>
+</form>
+<span id="man-word-span"></span>
+<div id="message-span">Мужчинитивы — это слова мужского рода,
+    альтернативные или парные аналогичным понятиям женского рода,
+    относящимся ко всем людям и предметам независимо от их пола.
+    <br>
+    <br>
+    При помощи этой небольшой программы, реализующей мужественную
+    логику, вы сами можете создать муженитивы к любому слову.
+</div>
+</body>
+</html>
