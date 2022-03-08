@@ -12,7 +12,7 @@
 <div class="background" id="background1"></div>
 <div class="background" id="background2"></div>
 <h1 id="title-container">
-    <span onclick="swapTitle()" id="title-span">Муженизатор</span>
+    <span onclick="toggleManText()" id="title-span">Муженизатор</span>
 </h1>
 <form id="form" onsubmit="requestFromDictionary();return false">
     <div id="input-container">
@@ -21,13 +21,21 @@
     </div>
 </form>
 <span id="man-word-span"></span>
-<div id="message-span">Муженитивы — это слова мужского рода,
-    альтернативные или парные аналогичным понятиям женского рода,
-    относящимся ко всем людям и предметам независимо от их пола.
-    <br>
-    <br>
-    При помощи этой небольшой программы, реализующей мужественную
-    логику, вы сами можете создать муженитивы к любому слову.
+<div id="message-span">
+</div>
+<div id="bottom-button-container">
+    <a class="bottom-button" href="https://github.com/HukuToc2288/muzhenizator" title="Исходный код на Github">
+        <div>Исходный код</div>
+    </a>
+    <a class="bottom-button" href="javascript:share_page()" title="Поделиться в ВК">
+        <div>Поделиться в ВК</div>
+    </a>
+<!--    <a class="bottom-button" href="javascript:share_tg()" title="Поделиться в ТГ">-->
+<!--        <div>Поделиться в ТГ</div>-->
+<!--    </a>-->
+<!--    <a class="bottom-button" href="javascript:support()" title="Дать денег">-->
+<!--        <div>Поддержать</div>-->
+<!--    </a>-->
 </div>
 </body>
 </html>

@@ -2,12 +2,34 @@
 // https://wordhelp.ru/
 // https://docs.google.com/spreadsheets/d/1uOQOnRF6fDwnN3rPvECSnTQIlxjOamvV-iJ2v6XmVAg/edit?usp=sharing
 
-function swapTitle() {
-    const e = document.getElementById("title-span");
-    if (e.innerText === "Муженизатор") {
-        e.innerText = "Угнетатор"
+let normalText = "Муженитивы — это слова мужского рода,\n" +
+    "    альтернативные или парные аналогичным понятиям женского рода,\n" +
+    "    относящимся ко всем людям и предметам независимо от их пола.\n" +
+    "    <br>\n" +
+    "    <br>\n" +
+    "    При помощи этой небольшой программы, реализующей мужественную\n" +
+    "    логику, вы сами можете создать муженитивы к любому слову.";
+
+let manlierText = "Муженитивы — это словы мужского рода,\n" +
+    "    альтернативные или парные аналогичным понятиям женского рода,\n" +
+    "    относящимся ко всем людям и предметам независимо от их пола.\n" +
+    "    <br>\n" +
+    "    <br>\n" +
+    "    При помощи этого небольшого программа, реализующего мужественный\n" +
+    "    логик, вы сами можете создать муженитивы к любому слову.";
+
+let supportText = "Пожертвовать средства на поддержку и развития проекта" +
+    "вы можете переводом на кошелёк Qiwi или на карту через СПБ по номеру телефона +79920236495;" +
+    "<br>" +
+    "<br>" +
+    "Также вы можете перевести средства на биткойн-кошелёк bc1qtx49fwx8ut4tf0p7u4tlz6ks4t6uw9pmj89ky7"
+
+function toggleManText() {
+    const e = document.getElementById("message-span");
+    if (e.innerHTML === normalText) {
+        e.innerHTML = manlierText
     } else {
-        e.innerText = "Муженизатор"
+        e.innerHTML = normalText
     }
 }
 
@@ -55,7 +77,7 @@ function showToUser(initialWord, words) {
 }
 
 function requestFromDictionary() {
-    let word = document.getElementById("word-input").value.toLowerCase()
+    let word = document.getElementById("word-input").value.toLowerCase().trim()
     if (!new RegExp("^[а-яё\-]+$").test(word)) {
         document.getElementById("message-span").innerHTML =
             "Введите одно слово на русском языке"
@@ -130,4 +152,32 @@ function onAjaxError(msg) {
 // this errors happens when received json with "ok: false"
 function onApiError(msg) {
     // todo
+}
+
+$(function () {
+    toggleManText();
+});
+
+function share_page() {
+    let vk_url = "http://vk.com/share.php"
+        + "?url=" + URL.href
+        + "&title=" + URL.title;
+
+    let new_tab = window.open(vk_url, '_blank');
+    new_tab.focus();
+}
+
+// todo разобраться с кнопками
+function share_tg() {
+    let vk_url = "https://t.me/share/url"
+        + "?url=" + URL.href
+        + "&text=" + URL.title;
+
+    let new_tab = window.open(vk_url, '_blank');
+    new_tab.focus();
+}
+
+
+function support() {
+    const e = document.getElementById("message-span").innerHTML = supportText
 }

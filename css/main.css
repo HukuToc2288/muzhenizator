@@ -48,6 +48,7 @@ body {
     max-width: 80vh;
     font-size: 120%;
     text-align: center;
+    flex-grow: 1;
 }
 
 #input-container {
@@ -96,11 +97,36 @@ input::-webkit-input-placeholder {
 
 }
 
-.background{
+.background {
     height: 100%;
     left: 0;
     position: absolute;
     top: 0;
     width: 100%;
     z-index: -1;
+}
+
+#bottom-button-container {
+    position: fixed;
+    left: 50%;
+    bottom: 1rem;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+}
+
+.bottom-button {
+    cursor: pointer;
+    font-family: helvetica, serif;
+    font-size: 120%;
+    margin: 1rem;
+    color: #777;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.bottom-button:hover {
+    color: #ccc;
+
 }
