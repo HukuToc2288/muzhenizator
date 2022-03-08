@@ -1,6 +1,11 @@
 <?php
+include_once 'credentials.php';
 global $link;
-$link = mysqli_connect("192.168.0.2:3306", "morphology", "morphman", "morphology");
+/* @var $dbHost string */
+/* @var $dbUser string */
+/* @var $dbPass string */
+/* @var $dbName string */
+$link = mysqli_connect($dbHost,$dbUser,$dbPass,$dbName);
 
 if ($link == false) {
     printError("Невозможно подключиться к MySQL " . mysqli_connect_error());
